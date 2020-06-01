@@ -15,7 +15,7 @@ class OrderDetailController extends Controller
     public function index()
     {
         $orderdetail = OrderDetail::all();
-        return view('orderdetails.index', array('orderdetails' => $orderdetail));
+        return view('admin.orderdetails.index', array('orderdetails' => $orderdetail));
     }
 
     /**
@@ -25,7 +25,7 @@ class OrderDetailController extends Controller
      */
     public function create()
     {
-        return view('orderdetails.create');
+        return view('admin.orderdetails.create');
     }
 
     /**

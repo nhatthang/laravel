@@ -7,6 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class OrderDetail extends Model
 {
     protected $table = 'order_detail';
+    protected $fillable = [
+        'name',
+        'price',
+        'quantity',
+        'total',
+        'order_id',
+        'product_id'
+    ];
     // function order(){
     //     return $this->belongsToMany('App\Models\Order', 'order_id', 'id');
     // }

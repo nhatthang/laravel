@@ -16,7 +16,7 @@ class CustomerController extends Controller
     public function index()
     {
         $customer = Customer::all();
-        return view('customers.index', array('customers'=>$customer));
+        return view('admin.customers.index', array('customers'=>$customer));
     }
 
     /**
@@ -26,7 +26,7 @@ class CustomerController extends Controller
      */
     public function create()
     {
-        return view('customers.create');
+        return view('admin.customers.create');
     }
 
     /**
@@ -55,7 +55,7 @@ class CustomerController extends Controller
     public function show($id)
     {
         $customer = Customer::find($id);
-        return view('customers.show', array('customers'=>$customer));
+        return view('admin.customers.show', array('customers'=>$customer));
     }
 
     /**
@@ -67,7 +67,7 @@ class CustomerController extends Controller
     public function edit($id)
     {
         $customer = Customer::find($id);
-        return view('customers.edit', array('customers'=>$customer));
+        return view('admin.customers.edit', array('customers'=>$customer));
     }
 
     /**
@@ -77,7 +77,7 @@ class CustomerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CustomerRequest $request, $id)
     {
         $customer = Customer::find($id);
         $customer->name = $request['name'];
@@ -89,7 +89,6 @@ class CustomerController extends Controller
             // dd($request->all());
         }
         return redirect()->route('customers.edit');
-
     }
 
     /**

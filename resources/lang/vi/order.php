@@ -13,10 +13,10 @@ return [
     |
     */
 
-    'label.customid' => 'Customer_ID',
-    'label.date' => 'Date',
-    'label.totalPrice' => 'Total Price',
-    'label.name' => 'Customer',
+    'label.customid' => 'Customer_ID:',
+    'label.date' => 'Date:',
+    'label.totalPrice' => 'Total Price:',
+    'label.name' => 'Customer:',
 
     'errors.date.required' => 'Ngày là bắt buộc',
     'errors.totalPrice.required' => 'Giá là bắt buộc',

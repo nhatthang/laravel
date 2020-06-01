@@ -13,9 +13,9 @@ return [
     |
     */
 
-    'label.name' => 'Tên khách hàng',
-    'label.age' => 'Tuổi',
-    'label.mail' => 'Email',
+    'label.name' => 'Tên khách hàng:',
+    'label.age' => 'Tuổi:',
+    'label.mail' => 'Email:',
 
     'errors.name.required' => 'Tên là bắt buộc',
     'errors.name.min' => 'Tên tối thiểu 5 ký tự',

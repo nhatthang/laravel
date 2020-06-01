@@ -13,9 +13,10 @@ return [
     |
     */
     //form input
-    'label.name' => 'Ten san pham',
-    'label.price' => 'Gia san pham',
-    'label.desc' => 'Mo ta',
+    'label.name' => 'Ten san pham:',
+    'label.price' => 'Gia san pham:',
+    'label.desc' => 'Mo ta:',
+    'label.img' => 'Anh:',
 
     'errors.name.required' => 'Tên là bắt buộc',
     'errors.name.min' => 'Tên tối thiểu là 5 ký tự',

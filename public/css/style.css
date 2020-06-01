@@ -1,7 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 table, tr, td{
     border: 1px solid black;
     border-collapse: collapse;
 }
 .help-block{
     color: red;
+}
+.left{
+    display: flex;
+    justify-content: flex-end;
+}
+/* .form-horizontal {
+    margin-bottom: 0px !important;
+} */
+.label {
+    margin-bottom: 6px;
+}
+td {
+    width: 160px;
+    text-align: center;
+}
+.margin{
+    margin: 5% 0% 0% 2%;
+}
+.margin-left{
+    margin-left: 10%;
+}
+.mg{
+    margin-left: 10%;
 }

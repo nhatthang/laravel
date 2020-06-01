@@ -17,7 +17,9 @@ class CreateProductTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('desc');
+            $table->string('image');
             $table->double('price');
+            $table->integer('product_brand_id')->unsigned();
             $table->timestamps();
         });
     }

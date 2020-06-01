@@ -8,11 +8,11 @@ use App\Models\Order;
 use Faker\Generator as Faker;
 
 $factory->define(Order::class, function (Faker $faker) {
+    $customerId = Customer::all()->pluck('id')->toArray();
     return [
-        'customer_id'=> function(){
-            return factory(Customer::class)->create()->id;
-        },
-        'date'=>$faker->date(),
-        'totalPrice'=>$faker->randomFloat(),
+        // 'customer_id'=> function(){
+        //     return factory(Customer::class)->create()->id;
+        // },
+            'customer_id' => $faker -> randomElement($customerId)
     ];
 });

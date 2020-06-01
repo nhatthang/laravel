@@ -29,7 +29,15 @@ Route::get('show/{id}', 'MyController@show');
 
 Route::get('tong/{a}/{b}', 'MyController@tong');
 
-Route::resource('products', 'ProductController');
-Route::resource('customers', 'CustomerController');
-Route::resource('orders', 'OrderController');
-Route::resource('orderdetails', 'OrderDetailController');
+Route::group(['prefix' => 'admin'], function () {
+    Route::get('/', function(){
+        return view('layouts.admin');
+    })->name('index');
+    Route::resource('products', 'ProductController');
+    Route::resource('customers', 'CustomerController');
+    Route::resource('orders', 'OrderController');
+    Route::resource('productbrands', 'ProductBrandController');
+    Route::resource('orderdetails', 'OrderDetailController');
+    Route::get('layouts', 'LayoutsController@admin');
+});
+

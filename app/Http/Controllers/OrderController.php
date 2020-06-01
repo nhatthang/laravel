@@ -16,7 +16,7 @@ class OrderController extends Controller
     public function index()
     {
         $order = Order::all();
-        return view('orders.index', array('orders'=>$order));
+        return view('admin.orders.index', array('orders'=>$order));
     }
 
     /**
@@ -26,7 +26,7 @@ class OrderController extends Controller
      */
     public function create()
     {
-        return view('orders.create');
+        return view('admin.orders.create');
     }
 
     /**
@@ -53,7 +53,7 @@ class OrderController extends Controller
     public function show($id)
     {
         $order = order::find($id);
-        return view('orders.show', array('orders'=>$order));
+        return view('admin.orders.show', array('orders'=>$order));
     }
 
     /**
@@ -65,7 +65,7 @@ class OrderController extends Controller
     public function edit($id)
     {
         $order = order::find($id);
-        return view('orders.edit', array('orders'=>$order));
+        return view('admin.orders.edit', array('orders'=>$order));
     }
 
     /**
