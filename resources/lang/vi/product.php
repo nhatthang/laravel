@@ -13,16 +13,19 @@ return [
     |
     */
     //form input
-    'label.name' => 'Ten san pham:',
-    'label.price' => 'Gia san pham:',
-    'label.desc' => 'Mo ta:',
-    'label.img' => 'Anh:',
+    'label.name' => 'Tên sản phẩm:',
+    'label.price' => 'Giá sản phẩm:',
+    'label.desc' => 'Mô tả:',
+    'label.image' => 'Ảnh:',
+    'label.product_brand_id' => 'Thương hiệu sản phẩm:',
 
     'errors.name.required' => 'Tên là bắt buộc',
     'errors.name.min' => 'Tên tối thiểu là 5 ký tự',
-    'errors.name.max' => 'Tên tối đa là 100 ký tự',
+    'errors.name.max' => 'Tên tối đa là 50 ký tự',
     'errors.desc.required' => 'Mô tả là bắt buộc',
     'errors.desc.min' => 'Mô tả tối thiểu là 5 ký tự',
-    'errors.desc.max' => 'Mô tả tối đa là 100 ký tự',
-    'errors.price.required' => 'Nhập giá vô'
+    'errors.desc.max' => 'Mô tả tối đa là 250 ký tự',
+    'errors.image.required' => 'Ảnh là bắt buộc',
+    'errors.price.required' => 'Nhập giá vô',
+    'errors.product_brand_id.required' => 'Không được để trống',
 ];

@@ -24,9 +24,11 @@ class ProductRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|min:5|max:100',
-            'desc' => 'required|min:5|max:100',
-            'price' => 'required'
+            'name' => 'required|min:5|max:50',
+            'desc' => 'required|min:5|max:250',
+            'image' => 'required',
+            'price' => 'required',
+            'product_brand_id' => 'required'
 
         ];
     }
@@ -38,7 +40,9 @@ class ProductRequest extends FormRequest
             'desc.required' => trans('product.errors.desc.required'),
             'desc.min' => trans('product.errors.desc.min'),
             'desc.max' => trans('product.errors.desc.max'),
-            'price.required' =>trans('product.errors.price.required')
+            'image.required' =>trans('product.errors.image.required'),
+            'price.required' =>trans('product.errors.price.required'),
+            'product_brand_id.required' =>trans('product.errors.product_brand_id.required'),
         ];
     }
 }

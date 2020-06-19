@@ -26,7 +26,6 @@ class CustomerRequest extends FormRequest
     {
         return [
             'name' => 'required|min:5|max:25',
-            'age' => 'required|min:1|max:3',
             'mail' => 'required|email'
         ];
     }
@@ -36,11 +35,8 @@ class CustomerRequest extends FormRequest
             'name.required' => trans('customer.errors.name.required'),
             'name.max' => trans('customer.errors.name.max'),
             'name.min' => trans('customer.errors.name.min'),
-            'age.required' => trans('customer.errors.age.required'),
-            'age.max' => trans('customer.errors.age.max'),
-            'age.min' => trans('customer.errors.age.min'),
             'mail.required' => trans('customer.errors.mail.required'),
-            'mail.email' => trans('customer.errors.mail.email'),
+            'mail.email' => trans('customer.errors.mail.email')
         ];
     }
     // public function failedValidation(Validator $validator){

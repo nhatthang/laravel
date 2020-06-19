@@ -18,7 +18,7 @@
 </html> --}}
 
 <!-- add modal -->
-<div class="modal fade" id="editModal" role="dialog">
+<div class="modal fade" id="editbrand{{ $productbrand->id }}" role="dialog">
     <div class="modal-dialog">
 
         <!-- Modal content-->
@@ -28,19 +28,17 @@
                 <button type="button" class="close" data-dismiss="modal"></button>
             </div>
             <div class="modal-body">
-                <form action="{{route('productbrands.update', $productbrand->id)}}" method="POST" class="">
+                <form action="{{ route('productbrands.update', $productbrand->id) }}" method="POST">
                     @csrf
                     @method('PUT')
                     <div class="form-group">
                         <label for="task-name" class="label">Product name</label>
-
                         <div class="">
-                            <input type="text" name="name" class="form-control">
+                            <input type="text" name="name" class="form-control" value="{{ $productbrand->name }}">
                         </div>
                     </div>
-
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-success">
+                        <button type="submit" class="btn btn-info">
                             Edit Brand
                         </button>
                         <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancel</button>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -33,4 +33,41 @@
         <input type="submit" name="sm" value="Update">
     </form>
 </body>
-</html>
+</html> --}}
+<!-- add modal -->
+<div class="modal fade" id="editcustomer{{$customer->id}}" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit brand</h5>
+                <button type="button" class="close" data-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <form action="{{ route('customers.update', $customer->id) }}" method="POST">
+                    @csrf
+                    @method('PUT')
+                    <div class="form-group">
+                        <label for="task-name" class="label">{{ trans('customer.label.name') }}</label>
+                        <div class="">
+                            <input type="text" name="name" class="form-control" value="{{ $customer->name }}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="task-name" class="label">{{ trans('customer.label.mail') }}</label>
+                        <div class="">
+                            <input type="text" name="mail" class="form-control" value="{{ $customer->mail }}">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-info">
+                            Edit Brand
+                        </button>
+                        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

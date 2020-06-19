@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -38,4 +38,55 @@
     <input type="submit" name="sm" value="Insert">
 </form>
 </body>
-</html>
+</html> --}}
+
+<!-- add modal -->
+<div class="modal fade" id="addcustomer" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add customer</h5>
+                <button type="button" class="close" data-dismiss="modal"><i class="fas fa-window-close red"></i></button>
+            </div>
+            <div class="modal-body">
+                <form action="{{ route('customers.store') }}" method="POST">
+                    @csrf
+                    @method('POST')
+                    <div class="form-group">
+                        <label for="task-name" class="label">{{ trans('customer.label.name') }}</label>
+                        <div class="">
+                            <input type="text" name="name" class="form-control" required>
+                        </div>
+                        @if ($errors->has('name'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('name') }}</strong><br>
+                            </span>
+                        @endif
+                    </div>
+
+                    <div class="form-group">
+                        <label for="task-name" class="label">{{ trans('customer.label.mail') }}</label>
+                        <div class="">
+                            <input type="email" name="mail" class="form-control" required>
+                        </div>
+                        @if ($errors->has('mail'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('mail') }}</strong><br>
+                            </span>
+                        @endif
+                    </div>
+
+                    <div class="modal-footer">
+                            <button type="submit" class="btn btn-info">
+                                Add Customer
+                            </button>
+                        <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
